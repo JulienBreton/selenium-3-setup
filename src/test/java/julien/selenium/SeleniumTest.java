@@ -12,22 +12,22 @@ import org.testng.annotations.*;
 import org.testng.ITestContext;
 
 public class SeleniumTest {
-	
+
 	WebDriver driver;
-	
+
 	@BeforeTest
 	public void setUp(ITestContext context) throws MalformedURLException {
-		
+
 		String sBrowser = context.getCurrentXmlTest().getParameter("selenium.browser");
 		String sRemoteAddress = context.getCurrentXmlTest().getParameter("selenium.remoteAddress");
-				
+
 		if (sBrowser.equalsIgnoreCase("firefox")) {
-			
+
 			//The geckodriver is in the same folder than the selenium-server-standalone 
 			driver = new RemoteWebDriver(new URL(sRemoteAddress), new FirefoxOptions());
 		}
 		else if (sBrowser.equalsIgnoreCase("chrome")) {
-			
+
 			//The chromedriver is in the same folder than the selenium-server-standalone 
 			driver = new RemoteWebDriver(new URL(sRemoteAddress), new ChromeOptions());
 		}
@@ -37,17 +37,17 @@ public class SeleniumTest {
 		}
 
 	}
-	
-    @AfterTest
-    public void afterTest() {
-    	
-        driver.quit();
-    }
-    
-    @Test
-    public void sampleTest() {
-        
-    	driver.get("https://www.google.fr");
-    	Assert.assertEquals(driver.getTitle(), "Google");
-    }
+
+	@AfterTest
+	public void afterTest() {
+
+		driver.quit();
+	}
+
+	@Test
+	public void sampleTest() {
+
+		driver.get("https://www.google.fr");
+		Assert.assertEquals(driver.getTitle(), "Google");
+	}
 }
