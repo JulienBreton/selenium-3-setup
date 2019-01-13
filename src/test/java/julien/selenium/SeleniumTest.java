@@ -1,6 +1,5 @@
 package julien.selenium;
 
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -20,19 +19,19 @@ public class SeleniumTest {
 	public void setUp(ITestContext context) throws MalformedURLException {
 		
 		String sBrowser = context.getCurrentXmlTest().getParameter("selenium.browser");
-		String sRemoteAddress = context.getCurrentXmlTest().getParameter("selenium.remoteAddress");		
+		String sRemoteAddress = context.getCurrentXmlTest().getParameter("selenium.remoteAddress");
 				
 		if (sBrowser.equalsIgnoreCase("firefox")) {
 			
 			//The geckodriver is in the same folder than the selenium-server-standalone 
-			driver = new RemoteWebDriver(new URL(sRemoteAddress),  new FirefoxOptions());
+			driver = new RemoteWebDriver(new URL(sRemoteAddress), new FirefoxOptions());
 		}
 		else if (sBrowser.equalsIgnoreCase("chrome")) {
 			
 			//The chromedriver is in the same folder than the selenium-server-standalone 
-			driver = new RemoteWebDriver(new URL(sRemoteAddress),  new ChromeOptions());
+			driver = new RemoteWebDriver(new URL(sRemoteAddress), new ChromeOptions());
 		}
-		else 
+		else
 		{
 			throw new IllegalArgumentException("[ERROR] The browser is not defined or unknowed. Actual browser : -"+sBrowser+"-");
 		}
@@ -48,7 +47,7 @@ public class SeleniumTest {
     @Test
     public void sampleTest() {
         
-    	driver.get("https://www.google.fr");    	
+    	driver.get("https://www.google.fr");
     	Assert.assertEquals(driver.getTitle(), "Google");
     }
 }
