@@ -29,7 +29,7 @@ java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localho
   * To run docker as a normal user, run this command : `sudo usermod -a -G docker $USER`.
 * [Install Docker Compose](https://docs.docker.com/compose/install/)
 * [Create the `docker-compose.yaml`](https://github.com/SeleniumHQ/docker-selenium#via-docker-compose)
-* Execute this docker-compose yml file use `docker-compose -f docker-composer.yaml up`.
+* To execute this docker-compose yml file use `docker-compose -f docker-composer.yaml up`.
   * Add the `-d` flag at the end for detached execution.
   * To stop the grid and cleanup the created containers, run `docker-compose down`.
 
