@@ -32,6 +32,8 @@ java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localho
 * To execute this docker-compose yml file use `docker-compose -f docker-composer.yaml up`.
   * Add the `-d` flag at the end for detached execution.
   * To stop the grid and cleanup the created containers, run `docker-compose down`.
+* Remote address for the client : http://ipserver:4444/wd/hub (e.g.: http://localhost:4444/wd/hub)
+* http://localhost:4444/grid/console 
 
 ### Launch the tests
 
