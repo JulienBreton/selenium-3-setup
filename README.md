@@ -34,6 +34,7 @@ java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localho
   * To stop the grid and cleanup the created containers, run `docker-compose down`.
 * Remote address for the client : http://ipserver:4444/wd/hub (e.g.: http://localhost:4444/wd/hub)
 * http://localhost:4444/grid/console 
+* Scaling up the grid on-demand : `docker-compose up -d --scale firefox=2 --scale chrome=2`.
 * Debugging : use this [composer file](https://github.com/JulienBreton/selenium-3-setup/blob/master/composer/docker-compose-debug.yaml) to start a grid with a VNC server. To connect to the node, use your favorite remote desktop client and use the address localhost:5901 for the Chrome node or localhost:5902 for the Firefox node (the password is secret). You can configure the ports in the composer file.
 
 ### Launch the tests
