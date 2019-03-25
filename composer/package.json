@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "webpack index.js assets/js/app.js"
+  },
+  "devDependencies": {
+    "selenium-grid-status": "^0.2.0",
+    "webpack": "^1.14.0"
+  }
+}
