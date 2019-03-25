@@ -36,11 +36,7 @@ java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localho
 * http://localhost:4444/grid/console 
 * Scaling up the grid on-demand : `docker-compose up -d --scale firefox=2 --scale chrome=2`.
 * Debugging : to debug your tests you have to use node-chrome-debug and node-firefox-debug (see the composer file). 
-In the composer file the node-chrome-debug has the port 6666 and the node-firefox-debug has the port 6667. 
-The purpose of these custom ports is to find the debug nodes easily.
-If you want to run the tests in a debug node use the ip and the port of the node (e.g. http://192.168.48.6:6666/wd/hub) in the 
-TestNG XML. You can get it in the grid console.
-To connect to the node and watch the test, use your favorite remote desktop client and use the address localhost:5901 for the Chrome node or localhost:5902 for the Firefox node (the password is secret). You can configure the VNC ports in the composer file.
+Go to http://localhost:4445/ to list the vnc access. The password is "sercret".
 
 ### Launch the tests
 
