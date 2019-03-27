@@ -28,13 +28,12 @@ java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localho
 * [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
   * To run docker as a normal user, run this command : `sudo usermod -a -G docker $USER`.
 * [Install Docker Compose](https://docs.docker.com/compose/install/)
-* [Create the `docker-compose.yaml`](https://github.com/SeleniumHQ/docker-selenium#via-docker-compose)
-* To execute this docker-compose yml file use `docker-compose -f docker-composer.yaml up`.
+* To execute the docker-compose yml file use `docker-compose -f composer/docker-composer.yaml up`.
   * Add the `-d` flag at the end for detached execution.
-  * To stop the grid and cleanup the created containers, run `docker-compose down`.
+  * To stop the grid and cleanup the created containers, run `docker-compose -f composer/docker-composer.yam down`.
+* Scaling up the grid on-demand : `docker-compose -f composer/docker-composer.yam up -d --scale firefox=2 --scale chrome=2`.  
 * Remote address for the client : http://ipserver:4444/wd/hub (e.g.: http://localhost:4444/wd/hub)
 * http://localhost:4444/grid/console 
-* Scaling up the grid on-demand : `docker-compose up -d --scale firefox=2 --scale chrome=2`.
 * Debugging : to debug your tests you have to use node-chrome-debug and node-firefox-debug (see the composer file). 
 Go to http://localhost:4445/ to list the vnc access. The password is "sercret".
 
