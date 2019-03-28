@@ -67,11 +67,11 @@ public class SeleniumTest {
 		//Upload the file
 		WebElement uploadElement = driver.findElement(By.id("uploadfile_0"));
 		uploadElement.sendKeys("/home/selenium/upload/test.txt");
-	    driver.findElement(By.id("terms")).click();
-	    driver.findElement(By.name("send")).click();
+		driver.findElement(By.id("terms")).click();
+		driver.findElement(By.name("send")).click();
 	    
 	    //Check if the file is uploaded
-	    WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("#res > center"), "1 file\nhas been successfully uploaded.")); 
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("#res > center"), "1 file\nhas been successfully uploaded.")); 
 	}
 }
