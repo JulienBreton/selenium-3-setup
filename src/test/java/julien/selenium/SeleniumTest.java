@@ -70,7 +70,7 @@ public class SeleniumTest {
 		driver.findElement(By.id("terms")).click();
 		driver.findElement(By.name("send")).click();
 	    
-	    //Check if the file is uploaded
+		//Check if the file is uploaded
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("#res > center"), "1 file\nhas been successfully uploaded.")); 
 	}
