@@ -44,7 +44,7 @@ public class SeleniumTest {
 		driver.quit();
 	}
 
-	@Test
+	@Test(invocationCount = 1)
 	public void sampleTest() {
 
 		driver.get("https://www.google.fr");
