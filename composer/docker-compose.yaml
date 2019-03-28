@@ -10,6 +10,7 @@ services:
         image: selenium/node-firefox-debug:3.141.59-mercury
         volumes:
             - /dev/shm:/dev/shm
+            - /home/julien/test:/home/selenium/upload
         depends_on:
             - hub
         environment:
@@ -21,12 +22,13 @@ services:
         image: selenium/node-chrome-debug:3.141.59-mercury
         volumes:
             - /dev/shm:/dev/shm
+            - /home/julien/test:/home/selenium/upload
         depends_on:
             - hub
         environment:
             HUB_HOST: hub
         ports:
-            - 5900  
+            - 5900         
 
     docker-gen:
         image: jwilder/docker-gen

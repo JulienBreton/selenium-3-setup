@@ -10,6 +10,7 @@
 				name="julien.selenium.SeleniumTest">
 				<methods>
 					<include name="sampleTest" />
+					<include name="uploadFile" />
 				</methods>
 			</class>
 		</classes>
