@@ -28,7 +28,7 @@ services:
         environment:
             HUB_HOST: hub
         ports:
-            - 5900         
+            - 5900
 
     docker-gen:
         image: jwilder/docker-gen
