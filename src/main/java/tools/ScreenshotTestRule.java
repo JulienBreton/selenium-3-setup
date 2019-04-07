@@ -15,7 +15,7 @@ public class ScreenshotTestRule extends TestListenerAdapter{
 	WebDriver driver;
 
 	@Override
-    public void onTestFailure(ITestResult testResult){
+	public void onTestFailure(ITestResult testResult){
 		
         String className = testResult.getTestClass().getName();
         String methodName = testResult.getMethod().getMethodName();
