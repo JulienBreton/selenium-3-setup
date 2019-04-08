@@ -14,11 +14,13 @@ import org.testng.annotations.BeforeTest;
 public class Browser {
 	
 	public static WebDriver driver;
+	public static String sBrowser = "";
+	String sRemoteAddress = "";
 
 	@BeforeTest
 	public void setUp(ITestContext context) throws MalformedURLException {
-
-		String sBrowser = context.getCurrentXmlTest().getParameter("selenium.browser");
+		
+		sBrowser = context.getCurrentXmlTest().getParameter("selenium.browser");
 		String sRemoteAddress = context.getCurrentXmlTest().getParameter("selenium.remoteAddress");
 
 		if (sBrowser.equalsIgnoreCase("firefox")) {

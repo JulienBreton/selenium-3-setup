@@ -25,8 +25,7 @@ public class ScreenshotTestRule extends TestListenerAdapter{
 	public void captureScreenshot(String className, String methodName) {
         	
 		try {
-                         
-                String filename = className + "_" + methodName + ".png";
+                String filename = Browser.sBrowser+"_"+className +"_"+ methodName + ".png";
                 File screenshot = ((TakesScreenshot)Browser.driver).getScreenshotAs(OutputType.FILE);
                 FileUtils.copyFile(screenshot, new File("screenshots/"+filename));
                 System.out.printf("Taking screenshot: " + "screenshots/"+filename);                
