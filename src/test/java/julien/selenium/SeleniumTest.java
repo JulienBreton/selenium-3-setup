@@ -17,7 +17,7 @@ public class SeleniumTest extends Browser{
 	public void sampleTest() {
 
 		driver.get("https://www.google.fr");
-		Assert.assertEquals(driver.getTitle(), "Googlei");
+		Assert.assertEquals(driver.getTitle(), "Google");
 	}
 	
 	@Test
