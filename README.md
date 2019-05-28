@@ -11,7 +11,7 @@ Maven project to start tests with Selenium Grid.
 * [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
   * To run docker as a normal user, run this command : `sudo usermod -a -G docker $USER` and reboot.
 * [Install Docker Compose](https://docs.docker.com/compose/install/)
-* To execute the docker-compose yml file use `docker-compose -f composer/docker-composer.yaml up`.
+* To execute the docker-compose yml file use `docker-compose -f composer/docker-composer.yam up`.
   * Add the `-d` flag at the end for detached execution.
   * To stop the grid and cleanup the created containers, run `docker-compose -f composer/docker-composer.yam down`.
 * Scaling up the grid on-demand : `docker-compose -f composer/docker-composer.yam up -d --scale firefox=2 --scale chrome=2`.  
