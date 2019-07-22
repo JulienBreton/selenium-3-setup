@@ -13,7 +13,7 @@ Maven project to start tests with Selenium Grid.
 * [Install Docker Compose](https://docs.docker.com/compose/install/)
 * To execute the docker-compose yml file use `docker-compose -f composer/docker-composer.yaml up`.
   * Add the `-d` flag at the end for detached execution.
-  * To stop the grid and cleanup the created containers, run `docker-compose -f composer/docker-composer.yaml down`.
+  * To stop the grid and cleanup the created containers, run `docker-compose -f composer/docker-compose.yaml down`.
 * Scaling up the grid on-demand : `docker-compose -f composer/docker-composer.yaml up -d --scale firefox=2 --scale chrome=2`.  
 * Remote address for the client : http://ipserver:4444/wd/hub (e.g.: http://localhost:4444/wd/hub)
 * http://localhost:4444/grid/console 
