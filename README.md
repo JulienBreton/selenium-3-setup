@@ -20,6 +20,7 @@ Maven project to start tests with Selenium Grid.
 * Debugging : to debug your tests you have to use node-chrome-debug and node-firefox-debug (see the composer file). 
 Go to http://localhost:4445/ to list the vnc access. The password is "sercret".
 * You can share files between the host and the containers. It is usefull to upload files in a Web app. See /home/julien/test:/home/selenium/upload in the composer/docker-composer.yaml and adapt to your case.
+* You can rename the folder composer in seleniumv3 (for example) if you want to identify easily the containers in the list displayed by http://localhost:4445/
 
 #### Option 2 : Download and start the selenium-server-standalone. 
 
