@@ -3,11 +3,13 @@ version: '2'
 services:
     hub:
         image: selenium/hub:3.141.59-mercury
+        restart: on-failure
         ports:
             - "4444:4444"
 
     firefox:
         image: selenium/node-firefox-debug:3.141.59-mercury
+        restart: on-failure
         volumes:
             - /dev/shm:/dev/shm
             - /home/julien/test:/home/selenium/upload
@@ -20,6 +22,7 @@ services:
 
     chrome:
         image: selenium/node-chrome-debug:3.141.59-mercury
+        restart: on-failure
         volumes:
             - /dev/shm:/dev/shm
             - /home/julien/test:/home/selenium/upload
