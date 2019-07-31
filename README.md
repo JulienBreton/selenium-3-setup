@@ -2,7 +2,7 @@
 
 Maven project to start tests with Selenium Grid.
 
-### Set up the testing environment
+### Set up the testing environment on Ubuntu
 
 #### Option 1 : Use docker-selenium to set up the testing environment
 
