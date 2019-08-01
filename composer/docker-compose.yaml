@@ -12,7 +12,7 @@ services:
         restart: on-failure
         volumes:
             - /dev/shm:/dev/shm
-            - /home/julien/test:/home/selenium/upload
+            - /home/julien/test:/home/seluser/upload
         depends_on:
             - hub
         environment:
@@ -25,7 +25,7 @@ services:
         restart: on-failure
         volumes:
             - /dev/shm:/dev/shm
-            - /home/julien/test:/home/selenium/upload
+            - /home/julien/test:/home/seluser/upload
         depends_on:
             - hub
         environment:
