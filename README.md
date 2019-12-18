@@ -19,7 +19,7 @@ Maven project to start tests with Selenium Grid.
 * http://localhost:4444/grid/console 
 * Debugging : to debug your tests you have to use node-chrome-debug and node-firefox-debug (see the composer file). 
 Go to http://localhost:4445/ to list the vnc access. The password is "sercret".
-* You can share files between the host and the containers. It is usefull to upload files in a Web app. See /home/julien/test:/home/seluser/upload in the composer/docker-composer.yaml and adapt to your case.
+* You can share files between the host and the containers. It is usefull to upload files in a Web app. See /home/julien/test:/home/seluser/upload in the composer/docker-composer.yaml and adapt to your case. seluser is the user in the containers.
 * You can rename the folder composer in seleniumv3 (for example) if you want to identify easily the containers in the list displayed by http://localhost:4445/
 * If you want to set the timeouts, add GRID_TIMEOUT and GRID_BROWSER_TIMEOUT to the hub in the docker-compose.yaml. [To learn more about the timeouts, see also the Grid2 wiki.](https://github.com/SeleniumHQ/selenium/wiki/Grid2#configuring-timeouts-version-221-required) 
 ```
