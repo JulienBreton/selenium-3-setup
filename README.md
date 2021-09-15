@@ -6,7 +6,7 @@ Maven project to start tests with Selenium Grid.
 
 #### Option 1 : Use docker-selenium to set up the testing environment
 
-[docker-selenium project on github](https://github.com/SeleniumHQ/docker-selenium)
+[docker-selenium project on github](https://github.com/SeleniumHQ/docker-selenium/tree/selenium-3)
 
 * [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
   * To run docker as a normal user, run this command : `sudo usermod -a -G docker $USER` and reboot your computer.
